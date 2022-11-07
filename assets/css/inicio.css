@@ -1,0 +1,122 @@
+.slide-show {
+    max-width: 800px;
+    height: 500px;
+    overflow: hidden;
+    margin: 100px auto;
+    box-shadow: 2px 2px 4px black;
+}
+
+.slide {
+    display: flex;
+    transition: transform 0.5 ease-in-out;
+    transform: translateX(0);
+}
+
+.slide img {
+    object-fit: cover;
+    max-width: 800px;
+    height: 500px;
+}
+
+.line {
+    background-color: #F2C335;
+    width: 100%;
+    height: 10px;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-desc {
+    padding: 20px;
+}
+
+.desc-title h2{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 2em;
+}
+
+.desc-text p {
+    line-height: 1.5em;
+    padding: 0 30px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.about-color{
+    background-color: #35748C;
+    height: 200px;
+}
+
+.about-img {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    background-image: url('/assets/media/IBAGENS/sobre.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.impressora {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 500px;
+}
+
+.impressora-desc {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.impressora-desc h2 {
+    margin: 30px 0;
+    font-size: 2em;
+}
+
+.impressora-desc p {
+    line-height: 1.5em;
+    padding: 0 30px;
+    font-size: 1.1em;
+}
+
+.impressora-img {
+    background-image: url('../media/IBAGENS/impressoras.png');
+    background-size: cover;
+    background-position: 60% 70%;
+}
+
+.material {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 500px;
+}
+
+.material-img {
+    background-image: url('../media/IBAGENS/filamentos.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.material-desc {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.material-desc h2 {
+    margin: 30px 0;
+    font-size: 2em;
+}
+
+.material-desc p {
+    line-height: 1.5em;
+    padding: 0 30px;
+    font-size: 1.1em;
+}
