@@ -1,17 +1,31 @@
-const imgs = document.querySelector('#img');
-const img = document.querySelectorAll('#img img');
+var btn = document.querySelectorAll('.control');
+var img = document.querySelectorAll('.slide-item');
+var current = 0;
+var maxImg = img.length;
 
-let idx = 0;
+btn.forEach(control => {
+    control.addEventListener('click', () => {
+        
+        let btnPrev = control.classList.contains('seta-prev');
 
-function carrosel() {
-    idx++;
+        if(btnPrev) {
+            current -= 1;
+        }else {
+            current += 1;
+        }
 
-    if(idx > img.length - 1) {
-        idx = 0;
-    }
+        if(current >= maxImg) {
+            current = 0;
+        }
 
-    imgs.style.transform = `translateX(${-idx * 800}px)`;
-}
+        if(current < 0) {
+            current = maxImg - 1;
+        }
 
-setInterval(carrosel, 4000);
+        img[current].scrollIntoView({
+            inline: "center",
+            behavior: "smooth"
+        })
 
+    })
+});
